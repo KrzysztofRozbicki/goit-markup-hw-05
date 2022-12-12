@@ -1,6 +1,7 @@
 /* Deklaracja zmiennych globalnych dla kolorów - wg specyfikacji «C6»*/
 :root {
   --blue: #2196f3;
+  --blue-transparent: rgba(33, 150, 243, 0.9);
   --logo-black: #000000;
   --font-black: #212121;
   --font-gray: #757575;
@@ -39,20 +40,24 @@
 }
 .is-hidden {
   pointer-events: none;
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
 }
 
 .modal {
   position: fixed;
-  top: 221px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: var(--font-white);
   border-radius: 4px;
-  box-shadow: 0 0 0 1600px var(--background-overlay);
+  box-shadow: 0 0 0 100vh var(--background-overlay);
 }
 
 .modal-close {
@@ -77,7 +82,7 @@
 .menu-link.is-active:after {
   content: '';
   position: absolute;
-  top: 45px;
+  transform: translateY(46px);
   left: 0px;
   width: 53px;
   height: 4px;
@@ -92,6 +97,7 @@ h4,
 h5,
 h6,
 ul,
+p,
 figure {
   margin: 0px;
   padding: 0px;
@@ -394,6 +400,10 @@ body {
   flex-wrap: wrap;
 }
 
+.project-box {
+  position: relative;
+  width: 370px;
+}
 .project-box:hover,
 .project-box:focus {
   box-shadow: 0px 1px 1px var(--shadow-box-portfolio-1), 0px 4px 4px var(--shadow-box-portfolio-2),
@@ -418,9 +428,11 @@ body {
 }
 
 .project-text-box {
+  position: relative;
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
+  text-align: left;
 }
 
 .project-title {
@@ -438,6 +450,34 @@ body {
   letter-spacing: 0.03em;
   color: var(--font-gray);
   text-align: left;
+}
+
+.project-overflow-text-box {
+  position: relative;
+  overflow: hidden;
+  height: 294px;
+}
+
+.project-overflow-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--font-white);
+  text-align: left;
+  padding: 49px 45px 49px 24px;
+  background-color: var(--blue-transparent);
+  transition-property: transform, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+
+.project-box:hover .project-overflow-text,
+.project-box:focus .project-overflow-text {
+  transform: translateY(-294px);
 }
 
 /* Klasa buttons dla przycisków z filtrami */
