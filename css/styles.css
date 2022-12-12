@@ -38,26 +38,27 @@
 *:focus {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.is-hidden {
+.modal.is-hidden {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
 }
 
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
-  transition-property: opacity;
+  transition-property: opacity, transform;
   transition-timing-function: ease-in-out;
-  transition-duration: 250ms;
+  transition-duration: 500ms;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: var(--font-white);
   border-radius: 4px;
-  box-shadow: 0 0 0 100vh var(--background-overlay);
+  box-shadow: 0 0 0 100vw var(--background-overlay);
 }
 
 .modal-close {
@@ -68,6 +69,7 @@
   border: 1px solid var(--close-circle);
   background-color: var(--font-white);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .modal-close svg {
