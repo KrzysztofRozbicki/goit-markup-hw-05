@@ -69,10 +69,9 @@
       <section class="section call-to-action">
         <div class="container call-to-action-box">
           <h1 class="main-header">efektywne rozwiązania dla waszego biznesu</h1>
-          <button class="button-call-to-action" type="button">Zamów usługę</button>
+          <button data-modal-open class="button-call-to-action" type="button">Zamów usługę</button>
         </div>
       </section>
-
       <!-- Sekcja "nasze atuty" (tak podpisane na figmie) zawierająca 4 krótkie artykuły(?) -->
       <section class="section section-article">
         <div class="container">
@@ -445,5 +444,13 @@
         </div>
       </div>
     </footer>
+    <div class="modal is-hidden" data-modal>
+      <button class="modal-close" data-modal-close>
+        <svg width="11" height="11">
+          <use href="images/Close-X.svg#Vector"></use>
+        </svg>
+      </button>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
