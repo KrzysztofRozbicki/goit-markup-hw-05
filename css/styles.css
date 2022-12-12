@@ -24,6 +24,7 @@
   --shadow-box-portfolio-3: rgba(0, 0, 0, 0.16);
   --section-padding: 94px;
   --icon-background: rgba(255, 255, 255, 0.1);
+  --text-box-background: rgba(47, 48, 58, 0.8);
 }
 
 /* deklaracja Border-box */
@@ -279,7 +280,6 @@ body {
 .box-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 30px;
 }
 
@@ -404,6 +404,19 @@ body {
 .project-picture {
   vertical-align: middle;
 }
+
+.on-picture-text {
+  transform: translateY(-70px);
+  background-color: var(--text-box-background);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--font-white);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0;
+}
+
 .project-text-box {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
