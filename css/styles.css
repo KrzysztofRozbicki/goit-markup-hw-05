@@ -36,13 +36,6 @@
   box-sizing: border-box;
 }
 
-/* Efekty przejścia dla focus i hover dla koloru, tła i cieni */
-*:hover,
-*:focus {
-  transition-property: background-color, color, fill, shadow;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* resetowanie stylów */
 
 h1,
@@ -237,6 +230,7 @@ body {
   font-weight: 500;
   text-decoration: none;
   color: var(--font-black);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu {
@@ -312,6 +306,7 @@ body {
   padding: 16px 32px;
   display: inline-block;
   color: var(--icon-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list-link:hover,
@@ -352,6 +347,7 @@ body {
   padding: 12px;
   color: var(--icon-color);
   border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social:hover,
@@ -376,6 +372,7 @@ body {
 .project-box {
   position: relative;
   width: 370px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-box:hover,
 .project-box:focus {
@@ -443,9 +440,7 @@ body {
   text-align: left;
   padding: 49px 45px 49px 24px;
   background-color: var(--blue-transparent);
-  transition-property: transform, visibility;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-box:hover .project-overflow-text,
@@ -472,6 +467,7 @@ body {
   padding-top: 6px;
   padding-bottom: 6px;
   margin: 0px 4px 50px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-call-to-action {
@@ -500,6 +496,7 @@ body {
   font-weight: 500;
   color: var(--font-gray);
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-text-header:hover,
 .contact-text-header:focus {
@@ -536,6 +533,7 @@ body {
   background-color: var(--icon-background);
   border-radius: 50%;
   color: var(--font-white);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-footer-link:hover,
@@ -546,6 +544,7 @@ body {
   color: var(--font-address);
   text-decoration: none;
   font-style: normal;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-text-footer:hover,
