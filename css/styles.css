@@ -36,62 +36,12 @@
 }
 *:hover,
 *:focus {
+  transition-property: background-color, color, box-shadow;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal.is-hidden {
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.4);
-}
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transition-property: opacity, transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
-  visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
-  background-color: var(--font-white);
-  border-radius: 4px;
-  box-shadow: 0 0 0 100vw var(--background-overlay);
-}
+/* resetowanie stylów */
 
-.modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 8px;
-  border: 1px solid var(--close-circle);
-  background-color: var(--font-white);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.modal-close svg {
-  display: block;
-}
-
-.menu-link.is-active {
-  color: var(--blue);
-  position: relative;
-}
-
-.menu-link.is-active:after {
-  content: '';
-  position: absolute;
-  transform: translateY(46px);
-  left: 0px;
-  width: 53px;
-  height: 4px;
-  background-color: var(--blue);
-  border-radius: 2px;
-}
-/* Resetowanie stylów */
 h1,
 h2,
 h3,
@@ -242,6 +192,23 @@ body {
 .section-project {
   text-align: center;
   background-color: var(--font-white);
+}
+
+/* aktywna strona - link */
+.menu-link.is-active {
+  color: var(--blue);
+  position: relative;
+}
+
+.menu-link.is-active:after {
+  content: '';
+  position: absolute;
+  transform: translateY(46px);
+  left: 0px;
+  width: 53px;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 2px;
 }
 
 /* Klasa dla list */
@@ -604,4 +571,46 @@ body {
   background-color: var(--background-dark);
   line-height: 1.7;
   text-decoration: none;
+}
+
+/* OKNO MODUŁOWE */
+
+.modal.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background-color: var(--font-white);
+  border-radius: 4px;
+  box-shadow: 0 0 0 100vw var(--background-overlay);
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 9px;
+  border: 1px solid var(--close-circle);
+  background-color: var(--font-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close svg {
+  display: block;
 }
